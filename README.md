@@ -81,6 +81,7 @@ The core idea: trend detection stays local to the sensor node and keeps working 
 6. Blynk renders the live dashboard and fires a **push notification** when risk crosses the HIGH threshold.
 
 ## Demo Video
+Watch the full demo video here(https://drive.google.com/file/d/1RqIsQMfwbuYGt5k1PSvhBOA08KvZdKqM/view?usp=sharing)
 ### 1. Server (laptop)
 ```bash
 pip install -r requirements.txt
