@@ -71,26 +71,6 @@ The core idea: trend detection stays local to the sensor node and keeps working 
              └─────────────┘   └───────────────────────┘
 ```
 
-## Repository Structure
-
-```
-firmware/              ESP32-S3 sketch that runs during the live demo
-  riversense_esp32_only.ino
-
-server/                Laptop-side receiver: weather fetch + risk scoring + Blynk push
-  receiver_server.py
-
-training_data/         Scripts used to build the Edge Impulse training dataset
-  stream_with_delta.ino   -- streams sensor data to Edge Impulse Data Forwarder
-  add_delta.py            -- offline script to add the delta feature to existing samples
-
-docs/
-  architecture_diagram.png
-  RiverSense_AI_Hackathon_Report.pdf
-
-requirements.txt       Python dependencies for server/receiver_server.py
-```
-
 ## How It Works
 
 1. The **JSN-SR04T** ultrasonic sensor measures distance to the water surface. A median-of-three filter rejects single-reading noise.
