@@ -103,7 +103,7 @@ Flash it. On boot it connects to WiFi, samples the sensor, runs on-device infere
 Set up a Blynk template with virtual pins V0–V5 (water level, current rain, trend, forecast rain, risk score, risk status), a chart/gauge/label widget for each, and an automation that fires a push notification when the risk score crosses the HIGH threshold.
 
 ### 4. (Optional) Retraining the model
-Use `training_data/stream_with_delta.ino` with `edge-impulse-data-forwarder` to collect fresh labeled samples (rising / stable / falling), or `training_data/add_delta.py` to add the delta feature to existing raw-distance recordings offline.
+Use `Data_forwarder.ino` with `edge-impulse-data-forwarder` to collect fresh labeled samples (rising / stable / falling).
 
 ## Model Development Notes
 
@@ -115,8 +115,6 @@ Reliability safeguards added on top of the raw classifier:
 - **Majority voting** across the last 5 confident classification windows, to prevent a single noisy window from flipping the displayed trend.
 - **Confidence thresholding** — low-confidence predictions are held at the previous state rather than acted upon.
 - **Anomaly-based exclusion** — flagged readings are excluded from the risk calculation to prevent false alarms from unreliable sensor data.
-
-Full iteration history, confusion matrices, and results are in `docs/RiverSense_AI_Hackathon_Report.pdf`.
 
 ## Known Limitations
 
@@ -131,6 +129,3 @@ Full iteration history, confusion matrices, and results are in `docs/RiverSense_
 - Incorporate upstream forecast data as an additional risk input.
 - Historical data-driven water-level forecasting alongside the current trend classifier.
 
-## License
-
-This project was built for a hackathon submission. Add a license of your choice here (e.g. MIT) if open-sourcing further.
