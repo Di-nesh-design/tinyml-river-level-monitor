@@ -80,8 +80,8 @@ The core idea: trend detection stays local to the sensor node and keeps working 
 5. The server fetches **current + 24-hour-forecast rainfall** from Open-Meteo, computes a **weighted risk score** (water level 40%, trend 30%, forecast rain 20%, current rain 10%), and pushes all six values to **Blynk**.
 6. Blynk renders the live dashboard and fires a **push notification** when risk crosses the HIGH threshold.
 
-## Demo Video
-Watch the full demo video here(https://drive.google.com/file/d/1RqIsQMfwbuYGt5k1PSvhBOA08KvZdKqM/view?usp=sharing)
+## Demo VideoWatc
+h the full demo video here(https://drive.google.com/file/d/1RqIsQMfwbuYGt5k1PSvhBOA08KvZdKqM/view?usp=sharing)
 ### 1. Server (laptop)
 ```bash
 pip install -r requirements.txt
