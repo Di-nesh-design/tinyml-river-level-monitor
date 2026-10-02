@@ -12,6 +12,8 @@ Hackathon project by **Dinesh Behera (Team Lead)**, **Mihir Kumar Behera**, and 
 RiverSense AI senses river water level using a low-cost ultrasonic sensor, classifies the trend (rising / stable / falling) directly on-device using an Edge Impulse-trained TinyML model running on an ESP32-S3, fuses that with live weather forecast data, and pushes a real-time flood-risk score and automated alerts to a Blynk dashboard.
 
 The core idea: trend detection stays local to the sensor node and keeps working even if the network drops, while cloud-based weather data adds early warning on top — giving a warning before the water has actually risen, not just after.
+<img width="4000" height="3000" alt="1000312999" src="https://github.com/user-attachments/assets/aec2f5ed-493b-417a-95f2-cafa905b99ea" />
+
 
 ## Key Features
 
